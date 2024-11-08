@@ -1,0 +1,104 @@
+#conteudo{
+    width: 1000px;
+}
+#conteudo{
+
+}
+#conteudoDeEscolhas{
+
+}
+#caixaDeEscolhas{
+    display: flex;
+    justify-content: space-between;
+}
+#escolhaPrincipalCargo{
+    background-color: #06C167;
+    &:hover{
+        cursor: pointer;
+        background-color: #0ea059;
+    }
+}
+#escolhaPrincipalCategoria{
+    background-color: #634D2C;
+    &:hover{
+        cursor: pointer;
+        background-color: #835d25;
+    }
+}
+#escolhaPrincipalFuncionario{
+    background-color: #C14906;
+    &:hover{
+        cursor: pointer;
+        background-color: #a73f06;
+    }
+}
+#escolhaPrincipalIngrediente{
+    background-color: #30B1DA;
+    &:hover{
+        cursor: pointer;
+        background-color: #2385a3;
+    }
+}
+#escolhaPrincipalMedida{
+    background-color: #5E2C63;
+    &:hover{
+        cursor: pointer;
+        background-color: #5E2C63;
+    }
+}
+#escolhaPrincipalRestaurante{
+    background-color: #2C2F63;
+    &:hover{
+        cursor: pointer;
+        background-color: #131761;
+    }
+}
+#escolhaPrincipalReceita{
+    background-color: #DAD330;
+    &:hover{
+        cursor: pointer;
+        background-color: #a39f25;
+    }
+}
+.imgIcone{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+.escolhasSecundarias{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+        background-color: #3b3b3b;
+    }
+}
+#linhaBranca{
+    height: 1px;
+    width: 100%;
+    background-color: #757575;
+    margin-bottom: 30px;
+}
+#itensCadastrados{
+    height: 150px;
+    overflow-y: scroll;
+}
+#titulo{
+    margin: 30px 0;
+}
+.cadastrados{
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #5B5B5B;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}

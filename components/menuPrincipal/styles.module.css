@@ -1,0 +1,77 @@
+#conteudo {
+    width: 100%;
+    height: 450px;
+    margin: 20px 0 0;
+  }
+  #textoTitulo {
+    color: #000;
+    font-size: 16px;
+  }
+  #subtextoP {
+    color: #06c167;
+    font-size: 16px;
+  }
+  #boxBtn {
+    display: flex;
+  }
+  #btnRelatorio {
+    width: 180px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #06c167;
+    color: #fff;
+    border: none;
+    margin-right: 45px;
+    cursor: pointer;
+  }
+  #btnfiltro {
+    width: 180px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  
+  }
+  #boxContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 1000px;
+      margin: 30px 0;
+    }
+  #boxCardsUnico {
+    width: 180px;
+    height: 180px;
+    background-color: #06c167;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .boxCards {
+    width: 180px;
+    height: 180px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .tetxoTituloCards {
+    color: #fff;
+    font-size: 25px;
+  }
+  .tetxoCards {
+    color: #fff;
+  }
+  #tituloFinal{
+    font-size: 18px;
+    margin: 50px 0 50px;
+    width: 760px;
+  }
+  #subTituloFinal{
+      color: #06c167;
+  }
