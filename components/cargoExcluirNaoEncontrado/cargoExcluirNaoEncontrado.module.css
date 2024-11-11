@@ -1,0 +1,23 @@
+#caixaNaoEncontrado{
+    margin: 50px 0;
+}
+#tituloNaoEncontrado{
+    color: #F32323;
+    margin-bottom: 10px;
+}
+#subTituloNaoEncontrado{
+    color: #5B5B5B;
+}
+#botaoProcurar{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #F32323;
+    margin-left: 10px;
+    &:hover{
+        cursor: pointer;
+        background-color: #cf3232;
+    }
+}

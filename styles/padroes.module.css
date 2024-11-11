@@ -1,0 +1,116 @@
+#container{
+    width: 1000px;
+    height: 460px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#subContainer{
+    box-sizing: border-box;
+    padding: 30px;
+}
+#primeiroConteudo{
+    padding: 30px;
+}
+#indicacao{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+#indicacao{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+.indicacaoExcluir{
+    background-color: #F32323;
+}
+.indicacaoCargo{
+    background-color: #06C167;
+}
+.caixaDasEntradas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.titulo{
+    color: #525252;
+    margin-bottom: 15px;
+}
+.entradaPequena{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.entradaMedia{
+    height: 60px;
+    width: 100%;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#caixaDeBotoes{
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+#botao{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.botaoCargo{
+    background-color: #06C167;
+    &:hover{
+        cursor: pointer;
+        background-color: #056335;
+    }
+}
+.botaoExcluirCargo{
+    background-color: #F32323;
+    &:hover{
+        background-color: #b41b1b;
+    }
+}
+#botaoVoltar{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    &:hover{
+        cursor: pointer;
+        background-color: #0c0c0c;
+    }
+}
+#balaoCriadoComSucesso{
+    width: 300px;
+    height: 200px;
+    background-color: #06C167;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#containerSucesso{
+    height: 460px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

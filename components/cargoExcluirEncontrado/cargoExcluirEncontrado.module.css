@@ -1,0 +1,13 @@
+#descricao{
+    color: #F32323;
+    margin-bottom: 30px;
+}
+#entradaPequenaBloqueada{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+    cursor:not-allowed;
+}

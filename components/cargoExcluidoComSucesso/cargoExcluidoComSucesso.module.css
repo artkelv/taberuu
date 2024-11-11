@@ -1,0 +1,12 @@
+#balaoExcluidoComSucesso{
+    width: 300px;
+    height: 200px;
+    background-color: #F32323;
+    color: #f1f1f1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 50px auto 0;
+}
