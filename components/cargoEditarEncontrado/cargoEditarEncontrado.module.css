@@ -1,0 +1,11 @@
+#subContainer{
+    padding: 30px;
+    height: 100%;
+}
+#cargoEncontrado{
+    color: #06C167;
+}
+#idDaVaga{
+    color: #06C167;
+    margin-top: 10px;
+}

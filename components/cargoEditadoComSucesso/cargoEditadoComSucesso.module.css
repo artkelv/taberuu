@@ -1,0 +1,10 @@
+#subContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#caixaBotoes{
+    display: flex;
+    justify-content: flex-end;
+}

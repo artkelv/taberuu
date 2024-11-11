@@ -1,0 +1,22 @@
+
+#subContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#subContainer{
+    background-color: #f1f1f1;
+    height: 100%;
+}
+#atencao{
+    text-align: center;
+    padding: 15px 0;
+}
+#linha{
+    height: 1px;
+    width: 100%;
+    background-color: #636363;
+}
+#caixaExclusiva{
+    padding: 30px 0 0 30px;
+}

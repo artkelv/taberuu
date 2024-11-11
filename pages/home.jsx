@@ -56,6 +56,8 @@ function Home(){
         setTela(<CargoEditar/>)
        }else if(stateEstadoPrincipal === "excluirCargo"){
         setTela(<CargoExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaCargo"){
+        setTela(<MenuCargo/>)
         //--------------- AQUI ACABA O IF DO MENU PRINCIPAL ---------------
        }else if(stateEstadoPrincipal === "cargoCriadoComSucesso"){
         setTela(<CargoCriadoComSucesso/>)
