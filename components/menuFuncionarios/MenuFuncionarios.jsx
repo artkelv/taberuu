@@ -10,6 +10,8 @@ import imgExcluir from "@/public/img/excluir.png";
 import Image from 'next/image';
 
 export default function MenuFuncionarios() {
+  const dispatch = useDispatch();
+  
   return (
     <div id={styles.conteudo}>
         <div id={styles.conteudoDeEscolhas}>

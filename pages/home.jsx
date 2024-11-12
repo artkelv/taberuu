@@ -26,6 +26,16 @@ import CargoEditadoComSucesso from "@/components/cargoEditadoComSucesso/CargoEdi
 import CargoExcluirNaoEncontrado from "@/components/cargoExcluirNaoEncontrado/CargoExcluirNaoEncontrado";
 import CargoExcluirEncontrado from "@/components/cargoExcluirEncontrado/CargoExcluirEncontrado";
 import CargoExcluidoComSucesso from "@/components/cargoExcluidoComSucesso/CargoExcluidoComSucesso";
+import FuncionarioCriadoComSucesso from "@/components/funcionarioCriadoComSucesso/FuncionarioCriadoComSucesso";
+import FuncionarioEditarEncontrado from "@/components/funcionarioEditarEncontrado/FuncionarioEditarEncontrado";
+import FuncionarioEditarNaoEncontrado from "@/components/funcionarioEditarNaoEncontrado/FuncionarioEditarNaoEncontrado";
+import FuncionarioEditadoComSucesso from "@/components/funcionarioEditadoComSucesso/FuncionarioEditadoComSucesso";
+import FuncionarioExcluirNaoEncontrado from "@/components/funcionarioExcluirNaoEncontrado/FuncionarioExcluirNaoEncontrado";
+import FuncionarioExcluirEncontrado from "@/components/funcionarioExcluirEncontrado/FuncionarioExcluirEncontrado";
+import FuncionarioExcluidoComSucesso from "@/components/funcionarioExcluidoComSucesso/FuncionarioExcluidoComSucesso";
+import FuncionarioCriar from "@/components/funcionarioCriar/FuncionarioCriar";
+import FuncionarioEditar from "@/components/funcionarioEditar/FuncionarioEditar";
+import FuncionarioExcluir from "@/components/funcionarioExcluir/FuncionarioExcluir";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -58,7 +68,7 @@ function Home(){
         setTela(<CargoExcluir/>)
        }else if(stateEstadoPrincipal === "voltarParaCargo"){
         setTela(<MenuCargo/>)
-        //--------------- AQUI ACABA O IF DO MENU PRINCIPAL ---------------
+        //--------------- AQUI ACABA O IF DO MENU CARGO ---------------
        }else if(stateEstadoPrincipal === "cargoCriadoComSucesso"){
         setTela(<CargoCriadoComSucesso/>)
        }else if(stateEstadoPrincipal === "cargoEditarEncontrado"){
@@ -74,11 +84,35 @@ function Home(){
        }else if(stateEstadoPrincipal === "cargoExcluidoComSucesso"){
         setTela(<CargoExcluidoComSucesso/>)
         //--------------- AQUI ACABA O IF DO CARGO ---------------
-       }else if(stateEstadoPrincipal === "voltar"){
+       }else if(stateEstadoPrincipal === "criarFuncionario"){
+        setTela(<FuncionarioCriar/>)
+        }else if(stateEstadoPrincipal === "editarFuncionario"){
+        setTela(<FuncionarioEditar/>)
+        }else if(stateEstadoPrincipal === "excluirFuncionario"){
+        setTela(<FuncionarioExcluir/>)
+        }else if(stateEstadoPrincipal === "voltarParaFuncionario"){
+        setTela(<MenuFuncionarios/>)
+        //--------------- AQUI ACABA O IF DO MENU FUNCIONARIO ---------------
+        }else if(stateEstadoPrincipal === "funcionarioCriadoComSucesso"){
+        setTela(<FuncionarioCriadoComSucesso/>)
+        }else if(stateEstadoPrincipal === "funcionarioEditarEncontrado"){
+        setTela(<FuncionarioEditarEncontrado/>)
+        }else if(stateEstadoPrincipal === "funcionarioEditarNaoEncontrado"){
+        setTela(<FuncionarioEditarNaoEncontrado/>)
+        }else if(stateEstadoPrincipal === "funcionarioEditadoComSucesso"){
+        setTela(<FuncionarioEditadoComSucesso/>)
+        }else if(stateEstadoPrincipal === "funcionarioExcluirNaoEncontrado"){
+        setTela(<FuncionarioExcluirNaoEncontrado/>)
+        }else if(stateEstadoPrincipal === "funcionarioExcluirEncontrado"){
+        setTela(<FuncionarioExcluirEncontrado/>)
+        }else if(stateEstadoPrincipal === "funcionarioExcluidoComSucesso"){
+        setTela(<FuncionarioExcluidoComSucesso/>)
+        //--------------- AQUI ACABA O IF DO FUNCIONARIO ---------------
+        }else if(stateEstadoPrincipal === "voltar"){
         setTela(<MenuPrincipal/>)
-       }else{
+        }else{
         setTela(<MenuPrincipal/>)
-       }
+        }
     }
     /* O PROBLEMA ESTA QUANDO SE CLICA NO MENU LATERAL E DEPOIS SE CLICA EM OUTRO LUGAR, SEMPRE IRÁ CAIR NO IF, PQ O VALOR DELE NAO ESTA MUDANDO, FAZENDO-O CAIR SEMPRE NOS PRIMEIROS IFS */
     useEffect(() => {
