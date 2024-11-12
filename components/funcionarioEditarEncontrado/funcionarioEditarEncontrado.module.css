@@ -1,0 +1,9 @@
+#conteudoEspecificoFuncionario{
+    padding: 0px 30px 0 30px;
+    overflow-y: scroll;   
+    height: 300px;
+}
+#funcionarioEncontrado{
+    color: #06C167;
+    margin: 30px 0;
+}

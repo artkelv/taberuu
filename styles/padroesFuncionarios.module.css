@@ -1,0 +1,116 @@
+#container{
+    width: 1000px;
+    height: 460px;
+    background-color: #f1f1f1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#primeiroConteudo{
+}
+#indicacao{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #C14906;
+}
+#indicacaoExcluir{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #F32323;
+}
+#conteudo{
+    padding: 0px 30px 0 30px;
+}
+.caixaForm{
+    display: flex;
+    justify-content: space-between;
+}
+.caixaDasEntradas{
+    display: flex;
+    flex-direction: column;
+}
+.caixaDasEntradasUm{
+    width: 250px;
+}
+.titulo{
+    color: #525252;
+    margin: 15px 0;
+}
+.entradaPequena{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.entradaMedia{
+    height: 60px;
+    width: 100%;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.entradaGrande{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#segundoConteudo{
+    padding: 30px;
+}
+#caixaDeBotoes{
+    display: flex;
+    justify-content: space-between;
+}
+#botaoVoltar{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #333333;
+    &:hover{
+        cursor: pointer;
+        background-color: #181818;
+    }
+}
+#botaoFuncionario{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #C14906;
+    &:hover{
+        cursor: pointer;
+        background-color: #722b05;
+    }
+}
+#botaoFuncionarioExcluir{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #F32323;
+    &:hover{
+        cursor: pointer;
+        background-color: #b31919;
+    }
+}
+#imagemNaoEncontrada{
+    margin: 30px 0;
+    width: 100px;
+    height: 100px;
+}
+#strongNaoEncontrado{
+    color: #F32323;
+}
