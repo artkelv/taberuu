@@ -26,6 +26,7 @@ import CargoEditadoComSucesso from "@/components/cargoEditadoComSucesso/CargoEdi
 import CargoExcluirNaoEncontrado from "@/components/cargoExcluirNaoEncontrado/CargoExcluirNaoEncontrado";
 import CargoExcluirEncontrado from "@/components/cargoExcluirEncontrado/CargoExcluirEncontrado";
 import CargoExcluidoComSucesso from "@/components/cargoExcluidoComSucesso/CargoExcluidoComSucesso";
+
 import FuncionarioCriadoComSucesso from "@/components/funcionarioCriadoComSucesso/FuncionarioCriadoComSucesso";
 import FuncionarioEditarEncontrado from "@/components/funcionarioEditarEncontrado/FuncionarioEditarEncontrado";
 import FuncionarioEditarNaoEncontrado from "@/components/funcionarioEditarNaoEncontrado/FuncionarioEditarNaoEncontrado";
@@ -36,6 +37,17 @@ import FuncionarioExcluidoComSucesso from "@/components/funcionarioExcluidoComSu
 import FuncionarioCriar from "@/components/funcionarioCriar/FuncionarioCriar";
 import FuncionarioEditar from "@/components/funcionarioEditar/FuncionarioEditar";
 import FuncionarioExcluir from "@/components/funcionarioExcluir/FuncionarioExcluir";
+
+import ReceitaCriar from "@/components/receitaCriar/ReceitaCriar";
+import ReceitaEditar from "@/components/receitaEditar/ReceitaEditar";
+import ReceitaExcluir from "@/components/receitaExcluir/ReceitaExcluir";
+import ReceitaCriadaComSucesso from "@/components/receitaCriadaComSucesso/ReceitaCriadaComSucesso";
+import ReceitaEditarEncontrada from "@/components/receitaEditarEncontrada/ReceitaEditarEncontrada";
+import ReceitaEditarNaoEncontrada from "@/components/receitaEditarNaoEncontrada/ReceitaEditarNaoEncontrada";
+import ReceitaEditadaComSucesso from "@/components/receitaEditadaComSucesso/ReceitaEditadaComSucesso";
+import ReceitaExcluirNaoEncontrada from "@/components/receitaExcluirNaoEncontrada/ReceitaExcluirNaoEncontrada";
+import ReceitaExcluirEncontrada from "@/components/receitaExcluirEncontrada/ReceitaExcluirEncontrada";
+import ReceitaExcluidaComSucesso from "@/components/receitaExcluidaComSucesso/ReceitaExcluidaComSucesso";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -86,33 +98,57 @@ function Home(){
         //--------------- AQUI ACABA O IF DO CARGO ---------------
        }else if(stateEstadoPrincipal === "criarFuncionario"){
         setTela(<FuncionarioCriar/>)
-        }else if(stateEstadoPrincipal === "editarFuncionario"){
-        setTela(<FuncionarioEditar/>)
-        }else if(stateEstadoPrincipal === "excluirFuncionario"){
-        setTela(<FuncionarioExcluir/>)
-        }else if(stateEstadoPrincipal === "voltarParaFuncionario"){
-        setTela(<MenuFuncionarios/>)
-        //--------------- AQUI ACABA O IF DO MENU FUNCIONARIO ---------------
-        }else if(stateEstadoPrincipal === "funcionarioCriadoComSucesso"){
-        setTela(<FuncionarioCriadoComSucesso/>)
-        }else if(stateEstadoPrincipal === "funcionarioEditarEncontrado"){
-        setTela(<FuncionarioEditarEncontrado/>)
-        }else if(stateEstadoPrincipal === "funcionarioEditarNaoEncontrado"){
-        setTela(<FuncionarioEditarNaoEncontrado/>)
-        }else if(stateEstadoPrincipal === "funcionarioEditadoComSucesso"){
-        setTela(<FuncionarioEditadoComSucesso/>)
-        }else if(stateEstadoPrincipal === "funcionarioExcluirNaoEncontrado"){
-        setTela(<FuncionarioExcluirNaoEncontrado/>)
-        }else if(stateEstadoPrincipal === "funcionarioExcluirEncontrado"){
-        setTela(<FuncionarioExcluirEncontrado/>)
-        }else if(stateEstadoPrincipal === "funcionarioExcluidoComSucesso"){
-        setTela(<FuncionarioExcluidoComSucesso/>)
-        //--------------- AQUI ACABA O IF DO FUNCIONARIO ---------------
-        }else if(stateEstadoPrincipal === "voltar"){
-        setTela(<MenuPrincipal/>)
-        }else{
-        setTela(<MenuPrincipal/>)
-        }
+       }else if(stateEstadoPrincipal === "editarFuncionario"){
+       setTela(<FuncionarioEditar/>)
+       }else if(stateEstadoPrincipal === "excluirFuncionario"){
+       setTela(<FuncionarioExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaFuncionario"){
+       setTela(<MenuFuncionarios/>)
+       //--------------- AQUI ACABA O IF DO MENU FUNCIONARIO ---------------
+       }else if(stateEstadoPrincipal === "funcionarioCriadoComSucesso"){
+       setTela(<FuncionarioCriadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "funcionarioEditarEncontrado"){
+       setTela(<FuncionarioEditarEncontrado/>)
+       }else if(stateEstadoPrincipal === "funcionarioEditarNaoEncontrado"){
+       setTela(<FuncionarioEditarNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "funcionarioEditadoComSucesso"){
+       setTela(<FuncionarioEditadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "funcionarioExcluirNaoEncontrado"){
+       setTela(<FuncionarioExcluirNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "funcionarioExcluirEncontrado"){
+       setTela(<FuncionarioExcluirEncontrado/>)
+       }else if(stateEstadoPrincipal === "funcionarioExcluidoComSucesso"){
+       setTela(<FuncionarioExcluidoComSucesso/>)
+       //--------------- AQUI ACABA O IF DO FUNCIONARIO ---------------
+       }else if(stateEstadoPrincipal === "criarReceita"){
+        setTela(<ReceitaCriar/>)
+       }else if(stateEstadoPrincipal === "editarReceita"){
+       setTela(<ReceitaEditar/>)
+       }else if(stateEstadoPrincipal === "excluirReceita"){
+       setTela(<ReceitaExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaReceita"){
+       setTela(<MenuReceitas/>)
+       //--------------- AQUI ACABA O IF DO MENU RECEITA ---------------
+       }else if(stateEstadoPrincipal === "receitaCriadaComSucesso"){
+       setTela(<ReceitaCriadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "receitaEditarEncontrada"){
+       setTela(<ReceitaEditarEncontrada/>)
+       }else if(stateEstadoPrincipal === "receitaEditarNaoEncontrada"){
+       setTela(<ReceitaEditarNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "receitaEditadaComSucesso"){
+       setTela(<ReceitaEditadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "receitaExcluirNaoEncontrada"){
+       setTela(<ReceitaExcluirNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "receitaExcluirEncontrada"){
+       setTela(<ReceitaExcluirEncontrada/>)
+       }else if(stateEstadoPrincipal === "receitaExcluidaComSucesso"){
+       setTela(<ReceitaExcluidaComSucesso/>)
+       //--------------- AQUI ACABA O IF DO MENU RECEITA ---------------
+       }else if(stateEstadoPrincipal === "voltar"){
+       setTela(<MenuPrincipal/>)
+       }else{
+       setTela(<MenuPrincipal/>)
+       }
     }
     /* O PROBLEMA ESTA QUANDO SE CLICA NO MENU LATERAL E DEPOIS SE CLICA EM OUTRO LUGAR, SEMPRE IRÁ CAIR NO IF, PQ O VALOR DELE NAO ESTA MUDANDO, FAZENDO-O CAIR SEMPRE NOS PRIMEIROS IFS */
     useEffect(() => {

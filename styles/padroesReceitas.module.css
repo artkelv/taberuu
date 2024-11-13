@@ -1,0 +1,161 @@
+#container{
+    width: 1000px;
+    height: 460px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow-y: scroll;
+}
+#primeiroContainer{
+
+}
+.caixaDasEntradas{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.caixaDasEntradasGrandes{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.titulo{
+    color: #525252;
+    margin-bottom: 15px;
+}
+.entradaPequena{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.entradaGrande{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#indicacao{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #DAD330;
+}
+#indicacaoExcluir{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #F32323;
+}
+#conteudo{
+    padding: 30px;
+}
+.primeiroConteudo{
+    display: flex;
+    justify-content: space-between;  
+}
+#segundoContainer{
+    padding: 30px;
+}
+#caixaDosBotoes{
+    display: flex;
+    justify-content: space-between;
+}
+#botaoVoltar{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #333333;
+    &:hover{
+        cursor: pointer;
+        background-color: #181818;
+    }
+}
+#botaoReceita{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #DAD330;
+    &:hover{
+        cursor: pointer;
+        background-color: #b3ae25;
+    }
+}
+
+#botaoReceitaExcluir{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #F32323;
+    &:hover{
+        cursor: pointer;
+        background-color: #c51d1d;
+    }
+}
+
+#anexarFotosDaReceita{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#subConteudoFotosDaReceita{
+
+}
+#tituloFotos{
+    color: #525252;
+}
+#caixaFotos{
+    margin: 10px 0;
+}
+#entradaDeArquivo{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #06C167;
+}
+#cancelarEnvioArquivo{
+    width: 115px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(165, 16, 16);
+    border-radius: 10px;
+    margin: 10px 0;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(206, 12, 12);
+    }
+}
+#caixaFotosReceitas{
+    display: flex;
+}
+.imgFotosReceita{
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+}
+#caixaNaoEncontrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #757575;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+#imgNotFound{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
