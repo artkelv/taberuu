@@ -10,11 +10,13 @@ import imgExcluir from "@/public/img/excluir.png";
 import Image from 'next/image';
 
 export default function MenuIngredientes() {
+  const dispatch = useDispatch();
+
   return (
     <div id={styles.conteudo}>
         <div id={styles.conteudoDeEscolhas}>
           <div id={styles.caixaDeEscolhas}>
-            <div id={styles.escolhaPrincipalIngrediente} className={styles.escolhasSecundarias} onClick={() => dispatch(alteraEstado("criarFuncionario"))}>
+            <div id={styles.escolhaPrincipalIngrediente} className={styles.escolhasSecundarias} onClick={() => dispatch(alteraEstado("criarIngrediente"))}>
               <Image alt='Icone' src={imgCriar} className={styles.imgIcone}/>
               Criar Ingrediente
             </div>
