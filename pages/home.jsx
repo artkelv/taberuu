@@ -48,6 +48,16 @@ import ReceitaEditadaComSucesso from "@/components/receitaEditadaComSucesso/Rece
 import ReceitaExcluirNaoEncontrada from "@/components/receitaExcluirNaoEncontrada/ReceitaExcluirNaoEncontrada";
 import ReceitaExcluirEncontrada from "@/components/receitaExcluirEncontrada/ReceitaExcluirEncontrada";
 import ReceitaExcluidaComSucesso from "@/components/receitaExcluidaComSucesso/ReceitaExcluidaComSucesso";
+import IngredienteCriar from "@/components/ingredienteCriar/IngredienteCriar";
+import IngredienteEditar from "@/components/ingredienteEditar/IngredienteEditar";
+import IngredienteExcluir from "@/components/ingredienteExcluir/IngredienteExcluir";
+import IngredienteCriadoComSucesso from "@/components/ingredienteCriadoComSucesso/IngredienteCriadoComSucesso";
+import IngredienteEditarEncontrado from "@/components/ingredienteEditarEncontrado/IngredienteEditarEncontrado";
+import IngredienteEditarNaoEncontrado from "@/components/ingredienteEditarNaoEncontrado/IngredienteEditarNaoEncontrado";
+import IngredienteEditadoComSucesso from "@/components/ingredienteEditadoComSucesso/IngredienteEditadoComSucesso";
+import IngredienteExcluirNaoEncontrado from "@/components/ingredienteExcluirNaoEncontrado/IngredienteExcluirNaoEncontrado";
+import IngredienteExcluirEncontrado from "@/components/ingredienteExcluirEncontrado/IngredienteExcluirEncontrado";
+import IngredienteExcluidoComSucesso from "@/components/ingredienteExcluidoComSucesso/IngredienteExcluidoComSucesso";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -144,6 +154,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "receitaExcluidaComSucesso"){
        setTela(<ReceitaExcluidaComSucesso/>)
        //--------------- AQUI ACABA O IF DO MENU RECEITA ---------------
+       }else if(stateEstadoPrincipal === "criarIngrediente"){
+        setTela(<IngredienteCriar/>)
+       }else if(stateEstadoPrincipal === "editarIngrediente"){
+       setTela(<IngredienteEditar/>)
+       }else if(stateEstadoPrincipal === "excluirIngrediente"){
+       setTela(<IngredienteExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaIngrediente"){
+       setTela(<MenuIngredientes/>)
+       //--------------- AQUI ACABA O IF DO MENU INGREDIENTE ---------------
+       }else if(stateEstadoPrincipal === "ingredienteCriadoComSucesso"){
+       setTela(<IngredienteCriadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "ingredienteEditarEncontrado"){
+       setTela(<IngredienteEditarEncontrado/>)
+       }else if(stateEstadoPrincipal === "ingredienteEditarNaoEncontrado"){
+       setTela(<IngredienteEditarNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "ingredienteEditadoComSucesso"){
+       setTela(<IngredienteEditadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "ingredienteExcluirNaoEncontrado"){
+       setTela(<IngredienteExcluirNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "ingredienteExcluirEncontrado"){
+       setTela(<IngredienteExcluirEncontrado/>)
+       }else if(stateEstadoPrincipal === "ingredienteExcluidoComSucesso"){
+       setTela(<IngredienteExcluidoComSucesso/>)
+       //--------------- AQUI ACABA O IF DO MENU INGREDIENTE ---------------
        }else if(stateEstadoPrincipal === "voltar"){
        setTela(<MenuPrincipal/>)
        }else{

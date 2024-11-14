@@ -1,0 +1,17 @@
+
+#atencao{
+    margin: 15px 0 10px 0;
+    width: 100%;
+    text-align: left;
+}
+#linha{
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#caixaNaoEncontrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
