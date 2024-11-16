@@ -58,6 +58,16 @@ import IngredienteEditadoComSucesso from "@/components/ingredienteEditadoComSuce
 import IngredienteExcluirNaoEncontrado from "@/components/ingredienteExcluirNaoEncontrado/IngredienteExcluirNaoEncontrado";
 import IngredienteExcluirEncontrado from "@/components/ingredienteExcluirEncontrado/IngredienteExcluirEncontrado";
 import IngredienteExcluidoComSucesso from "@/components/ingredienteExcluidoComSucesso/IngredienteExcluidoComSucesso";
+import RestauranteCriar from "@/components/restauranteCriar/RestauranteCriar";
+import RestauranteEditar from "@/components/restauranteEditar/RestauranteEditar";
+import RestauranteExcluir from "@/components/restauranteExcluir/RestauranteExcluir";
+import RestauranteCriadoComSucesso from "@/components/restauranteCriadoComSucesso/RestauranteCriadoComSucesso";
+import RestauranteEditarEncontrado from "@/components/restauranteEditarEncontrado/RestauranteEditarEncontrado";
+import RestauranteEditarNaoEncontrado from "@/components/restauranteEditarNaoEncontrado/RestauranteEditarNaoEncontrado";
+import RestauranteEditadoComSucesso from "@/components/restauranteEditadoComSucesso/RestauranteEditadoComSucesso";
+import RestauranteExcluirNaoEncontrado from "@/components/restauranteExcluirNaoEncontrado/RestauranteExcluirNaoEncontrado";
+import RestauranteExcluirEncontrado from "@/components/restauranteExcluirEncontrado/RestauranteExcluirEncontrado";
+import RestauranteExcluidoComSucesso from "@/components/restauranteExcluidoComSucesso/RestauranteExcluidoComSucesso";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -178,6 +188,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "ingredienteExcluidoComSucesso"){
        setTela(<IngredienteExcluidoComSucesso/>)
        //--------------- AQUI ACABA O IF DO MENU INGREDIENTE ---------------
+       }else if(stateEstadoPrincipal === "criarRestaurante"){
+        setTela(<RestauranteCriar/>)
+       }else if(stateEstadoPrincipal === "editarRestaurante"){
+       setTela(<RestauranteEditar/>)
+       }else if(stateEstadoPrincipal === "excluirRestaurante"){
+       setTela(<RestauranteExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaRestaurante"){
+       setTela(<MenuRestaurantes/>)
+       //--------------- AQUI ACABA O IF DO MENU RESTAURANTE ---------------
+       }else if(stateEstadoPrincipal === "restauranteCriadoComSucesso"){
+       setTela(<RestauranteCriadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "restauranteEditarEncontrado"){
+       setTela(<RestauranteEditarEncontrado/>)
+       }else if(stateEstadoPrincipal === "restauranteEditarNaoEncontrado"){
+       setTela(<RestauranteEditarNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "restauranteEditadoComSucesso"){
+       setTela(<RestauranteEditadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "restauranteExcluirNaoEncontrado"){
+       setTela(<RestauranteExcluirNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "restauranteExcluirEncontrado"){
+       setTela(<RestauranteExcluirEncontrado/>)
+       }else if(stateEstadoPrincipal === "restauranteExcluidoComSucesso"){
+       setTela(<RestauranteExcluidoComSucesso/>)
+       //--------------- AQUI ACABA O IF DO MENU RESTAURANTE ---------------
        }else if(stateEstadoPrincipal === "voltar"){
        setTela(<MenuPrincipal/>)
        }else{

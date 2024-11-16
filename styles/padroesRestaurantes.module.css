@@ -2,18 +2,16 @@
     width: 1000px;
     height: 460px;
     background-color: #f1f1f1;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-#primeiroConteudo{
-}
+#primeiroContainer{}
 #indicacao{
     text-align: center;
     color: #fff;
     padding: 10px;
-    background-color: #C14906;
+    background-color: #2C2F63;
 }
 #indicacaoExcluir{
     text-align: center;
@@ -22,22 +20,21 @@
     background-color: #F32323;
 }
 #conteudo{
-    padding: 0px 30px 0 30px;
+    padding: 30px;
 }
 .caixaForm{
     display: flex;
     justify-content: space-between;
 }
 .caixaDasEntradas{
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
-.caixaDasEntradasUm{
-    width: 250px;
+    margin-bottom: 15px;
 }
 .titulo{
     color: #525252;
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 .entradaPequena{
     height: 40px;
@@ -46,29 +43,6 @@
     border: 1px solid #757575;
     border-radius: 10px;
     padding-left: 15px;
-}
-.entradaMedia{
-    height: 60px;
-    width: 100%;
-    border: none;
-    border: 1px solid #757575;
-    border-radius: 10px;
-    padding-left: 15px;
-}
-.entradaGrande{
-    height: 80px;
-    width: 100%;
-    border: none;
-    border: 1px solid #757575;
-    border-radius: 10px;
-    padding-left: 15px;
-}
-#segundoContainer{
-    padding: 30px;
-}
-#caixaDosBotoes{
-    display: flex;
-    justify-content: space-between;
 }
 #botaoVoltar{
     width: 200px;
@@ -82,19 +56,19 @@
         background-color: #181818;
     }
 }
-#botaoFuncionario{
+#botaoRestaurante{
     width: 200px;
     height: 40px;
     color: #fff;
     border: none;
     border-radius: 10px;
-    background-color: #C14906;
+    background-color: #2C2F63;
     &:hover{
         cursor: pointer;
-        background-color: #722b05;
+        background-color: #131755;
     }
 }
-#botaoFuncionarioExcluir{
+#botaoRestauranteExcluir{
     width: 200px;
     height: 40px;
     color: #fff;
@@ -103,11 +77,18 @@
     background-color: #F32323;
     &:hover{
         cursor: pointer;
-        background-color: #b31919;
+        background-color: #bb1b1b;
     }
 }
+#segundoContainer{
+    padding: 30px;
+}
+#caixaDosBotoes{
+    display: flex;
+    justify-content: space-between;
+}
 #imagemNaoEncontrada{
-    margin: 30px 0;
+    margin-bottom: 20px;
     width: 100px;
     height: 100px;
 }
