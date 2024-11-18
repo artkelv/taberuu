@@ -10,11 +10,13 @@ import imgExcluir from "@/public/img/excluir.png";
 import Image from 'next/image';
 
 export default function MenuMedidas() {
+  const dispatch = useDispatch();
+
   return (
     <div id={styles.conteudo}>
         <div id={styles.conteudoDeEscolhas}>
           <div id={styles.caixaDeEscolhas}>
-            <div id={styles.escolhaPrincipalMedida} className={styles.escolhasSecundarias} onClick={() => dispatch(alteraEstado("criarFuncionario"))}>
+            <div id={styles.escolhaPrincipalMedida} className={styles.escolhasSecundarias} onClick={() => dispatch(alteraEstado("criarMedida"))}>
               <Image alt='Icone' src={imgCriar} className={styles.imgIcone}/>
               Criar Medida
             </div>

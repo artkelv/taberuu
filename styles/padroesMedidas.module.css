@@ -1,0 +1,93 @@
+#container{
+    width: 1000px;
+    height: 460px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#primeiroContainer{}
+#indicacao{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #5E2C63;
+}
+#indicacaoExcluir{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: #F32323;
+}
+#conteudo{
+    padding: 30px;
+}
+.caixaDasEntradas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.titulo{
+    color: #525252;
+    margin-bottom: 15px;
+}
+.entradaPequena{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#segundoContainer{
+    padding: 30px;
+}
+#caixaDosBotoes{
+    display: flex;
+    justify-content: space-between;
+}
+#botaoVoltar{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #333333;
+    &:hover{
+        cursor: pointer;
+        background-color: #181818;
+    }
+}
+#botaoMedida{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #5E2C63;
+    &:hover{
+        cursor: pointer;
+        background-color: #56175c;
+    }
+}
+#botaoMedidaExcluir{
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #F32323;
+    &:hover{
+        cursor: pointer;
+        background-color: #b81a1a;
+    }
+}
+#imagemNaoEncontrada{
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+}
+#strongNaoEncontrado{
+    color: #F32323;
+}

@@ -68,6 +68,16 @@ import RestauranteEditadoComSucesso from "@/components/restauranteEditadoComSuce
 import RestauranteExcluirNaoEncontrado from "@/components/restauranteExcluirNaoEncontrado/RestauranteExcluirNaoEncontrado";
 import RestauranteExcluirEncontrado from "@/components/restauranteExcluirEncontrado/RestauranteExcluirEncontrado";
 import RestauranteExcluidoComSucesso from "@/components/restauranteExcluidoComSucesso/RestauranteExcluidoComSucesso";
+import MedidaCriar from "@/components/medidaCriar/MedidaCriar";
+import MedidaEditar from "@/components/medidaEditar/MedidaEditar";
+import MedidaExcluir from "@/components/medidaExcluir/MedidaExcluir";
+import MedidaCriadaComSucesso from "@/components/medidaCriadaComSucesso/MedidaCriadaComSucesso";
+import MedidaEditarEncontrada from "@/components/medidaEditarEncontrada/MedidaEditarEncontrada";
+import MedidaEditarNaoEncontrada from "@/components/medidaEditarNaoEncontrada/MedidaEditarNaoEncontrada";
+import MedidaEditadaComSucesso from "@/components/medidaEditadaComSucesso/MedidaEditadaComSucesso";
+import MedidaExcluirNaoEncontrada from "@/components/medidaExcluirNaoEncontrada/MedidaExcluirNaoEncontrada";
+import MedidaExcluirEncontrada from "@/components/medidaExcluirEncontrada/MedidaExcluirEncontrada";
+import MedidaExcluidaComSucesso from "@/components/medidaExcluidaComSucesso/MedidaExcluidaComSucesso";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -212,6 +222,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "restauranteExcluidoComSucesso"){
        setTela(<RestauranteExcluidoComSucesso/>)
        //--------------- AQUI ACABA O IF DO MENU RESTAURANTE ---------------
+       }else if(stateEstadoPrincipal === "criarMedida"){
+        setTela(<MedidaCriar/>)
+       }else if(stateEstadoPrincipal === "editarMedida"){
+       setTela(<MedidaEditar/>)
+       }else if(stateEstadoPrincipal === "excluirMedida"){
+       setTela(<MedidaExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaMedida"){
+       setTela(<MenuMedidas/>)
+       //--------------- AQUI ACABA O IF DO MENU MEDIDA ---------------
+       }else if(stateEstadoPrincipal === "medidaCriadaComSucesso"){
+       setTela(<MedidaCriadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "medidaEditarEncontrada"){
+       setTela(<MedidaEditarEncontrada/>)
+       }else if(stateEstadoPrincipal === "medidaEditarNaoEncontrada"){
+       setTela(<MedidaEditarNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "medidaEditadaComSucesso"){
+       setTela(<MedidaEditadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "medidaExcluirNaoEncontrada"){
+       setTela(<MedidaExcluirNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "medidaExcluirEncontrada"){
+       setTela(<MedidaExcluirEncontrada/>)
+       }else if(stateEstadoPrincipal === "medidaExcluidaComSucesso"){
+       setTela(<MedidaExcluidaComSucesso/>)
+       //--------------- AQUI ACABA O IF DO MENU MEDIDA ---------------
        }else if(stateEstadoPrincipal === "voltar"){
        setTela(<MenuPrincipal/>)
        }else{
