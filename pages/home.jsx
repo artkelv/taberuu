@@ -78,6 +78,16 @@ import MedidaEditadaComSucesso from "@/components/medidaEditadaComSucesso/Medida
 import MedidaExcluirNaoEncontrada from "@/components/medidaExcluirNaoEncontrada/MedidaExcluirNaoEncontrada";
 import MedidaExcluirEncontrada from "@/components/medidaExcluirEncontrada/MedidaExcluirEncontrada";
 import MedidaExcluidaComSucesso from "@/components/medidaExcluidaComSucesso/MedidaExcluidaComSucesso";
+import CategoriaCriar from "@/components/categoriaCriar/CategoriaCriar";
+import CategoriaEditar from "@/components/categoriaEditar/CategoriaEditar";
+import CategoriaExcluir from "@/components/categoriaExcluir/CategoriaExcluir";
+import CategoriaCriadaComSucesso from "@/components/categoriaCriadaComSucesso/CategoriaCriadaComSucesso";
+import CategoriaEditarEncontrada from "@/components/categoriaEditarEncontrada/CategoriaEditarEncontrada";
+import CategoriaEditarNaoEncontrada from "@/components/categoriaEditarNaoEncontrada/CategoriaEditarNaoEncontrada";
+import CategoriaEditadaComSucesso from "@/components/categoriaEditadaComSucesso/CategoriaEditadaComSucesso";
+import CategoriaExcluirNaoEncontrada from "@/components/categoriaExcluirNaoEncontrada/CategoriaExcluirNaoEncontrada";
+import CategoriaExcluirEncontrada from "@/components/categoriaExcluirEncontrada/CategoriaExcluirEncontrada";
+import CategoriaExcluidaComSucesso from "@/components/categoriaExcluidaComSucesso/CategoriaExcluidaComSucesso";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -246,6 +256,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "medidaExcluidaComSucesso"){
        setTela(<MedidaExcluidaComSucesso/>)
        //--------------- AQUI ACABA O IF DO MENU MEDIDA ---------------
+       }else if(stateEstadoPrincipal === "criarCategoria"){
+        setTela(<CategoriaCriar/>)
+       }else if(stateEstadoPrincipal === "editarCategoria"){
+           setTela(<CategoriaEditar/>)
+       }else if(stateEstadoPrincipal === "excluirCategoria"){
+           setTela(<CategoriaExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaCategoria"){
+           setTela(<MenuCategorias/>)
+           //--------------- AQUI ACABA O IF DO MENU CATEGORIA ---------------
+       }else if(stateEstadoPrincipal === "categoriaCriadaComSucesso"){
+           setTela(<CategoriaCriadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "categoriaEditarEncontrada"){
+           setTela(<CategoriaEditarEncontrada/>)
+       }else if(stateEstadoPrincipal === "categoriaEditarNaoEncontrada"){
+           setTela(<CategoriaEditarNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "categoriaEditadaComSucesso"){
+           setTela(<CategoriaEditadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "categoriaExcluirNaoEncontrada"){
+           setTela(<CategoriaExcluirNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "categoriaExcluirEncontrada"){
+           setTela(<CategoriaExcluirEncontrada/>)
+       }else if(stateEstadoPrincipal === "categoriaExcluidaComSucesso"){
+           setTela(<CategoriaExcluidaComSucesso/>)
+           //--------------- AQUI ACABA O IF DO MENU CATEGORIA ---------------
        }else if(stateEstadoPrincipal === "voltar"){
        setTela(<MenuPrincipal/>)
        }else{
