@@ -11,8 +11,8 @@ return (
     <div id={padroes.container}>
         <div id={styles.subContainer}>
             <div>
-                <div id={padroes.indicacao} className={padroes.indicacaoExcluir}>
-                    <p>Voce está EXCLUINDO um cargo!</p>
+                <div id={padroes.indicacaoExcluir}>
+                    <p>Voce está EXCLUINDO um cargo</p>
                 </div>
                 <div id={styles.atencao}>
                     <p>ATENÇÃO: Para excluirmos um cargo primeiro precisamos localiza-lo! Comece procurando pelo nome do cargo</p>
@@ -25,9 +25,11 @@ return (
                     </div>
                 </div>
             </div>
-            <div id={padroes.caixaDeBotoes}>
-                <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
-                <button id={padroes.botao} className={padroes.botaoExcluirCargo} onClick={() => dispatch(alteraEstado("cargoExcluirEncontrado"))}>Procurar cargo</button>
+            <div id={padroes.segundoContainer}>
+                <div id={padroes.caixaDosBotoes}>
+                    <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
+                    <button id={padroes.botaoCargoExcluir} onClick={() => dispatch(alteraEstado("cargoExcluirNaoEncontrado"))}>Procurar cargo</button>
+                </div>
             </div>
         </div>
     </div>

@@ -9,11 +9,11 @@ export default function CargoCriar() {
 
   return (
     <div id={padroes.container}>
-      <div id={padroes.indicacao} className={padroes.indicacaoCargo}>
-        <p>Voce está CRIANDO uma Cargo!</p>
-      </div>
-      <div id={padroes.subContainer}>
-        <form>
+      <div>
+        <div>
+          <p id={padroes.indicacao}>Voce está CRIANDO uma Cargo!</p>
+        </div>
+        <div id={padroes.conteudo}>
           <div className={padroes.caixaDasEntradas}>
             <label className={padroes.titulo} htmlFor="">Nome do cargo</label>
             <input className={padroes.entradaPequena} type="text" name="" id="" placeholder="Nome do cargo"/>
@@ -23,14 +23,16 @@ export default function CargoCriar() {
             <input className={padroes.entradaMedia} type="text" name="" id="" placeholder="Descreva aqui a função do cargo que está sendo criado"/>
           </div>
           <div>
-            <h2 id={styles.idDoCargo}>ID do cargo</h2>
+            <h5 id={styles.idDoCargo}>ID do cargo</h5>
             <p id={styles.descricaoDoId}>O ID do cargo será gerado automaticamente!</p>
           </div>
-        </form>
+        </div>
       </div>
-      <div id={padroes.caixaDeBotoes}>
-        <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>voltar</button>
-        <button id={padroes.botao} className={padroes.botaoCargo} onClick={() => dispatch(alteraEstado("cargoCriadoComSucesso"))}>criar cargo</button>
+      <div id={padroes.segundoContainer}>
+        <div id={padroes.caixaDosBotoes}>
+          <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
+          <button id={padroes.botaoCargo} onClick={() => dispatch(alteraEstado("cargoCriadoComSucesso"))}>Criar Medida</button>
+        </div>
       </div>
     </div>
   )

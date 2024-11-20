@@ -10,25 +10,25 @@ export default function CargoExcluirNaoEncontrado() {
   return (
     <div id={padroes.container}>
         <div>
-            <div id={padroes.indicacao} className={padroes.indicacaoExcluir}>
+            <div id={padroes.indicacaoExcluir}>
                 <p>Voce está EXCLUINDO um cargo!</p>
             </div>
-            <div id={padroes.primeiroConteudo}>
+            <div id={padroes.conteudo}>
                 <div id={styles.caixaNaoEncontrado}>
                     <p id={styles.tituloNaoEncontrado}>Cargo NÃO encontrado!</p>
                     <p id={styles.subTituloNaoEncontrado}>Busque novamente usando o campo abaixo.</p>
                 </div>
-                <div>
+                <div className={padroes.caixaDasEntradas}>
                     <label className={padroes.titulo} htmlFor="">Nome do cargo</label>
-                    <div>
-                        <input className={padroes.entradaPequena} type="text" placeholder="Insira o nome do cargo" />
-                        <button id={styles.botaoProcurar} onClick={() => dispatch(alteraEstado("cargoExcluirEncontrado"))}>Procurar cargo</button>
-                    </div>
+                    <input className={padroes.entradaPequena} type="text" placeholder="Insira o nome do cargo" />
                 </div>
             </div>
         </div>
-        <div id={padroes.caixaDeBotoes}>   
-            <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>voltar</button>
+        <div id={padroes.segundoContainer}>
+            <div id={padroes.caixaDosBotoes}>   
+                <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>voltar</button>
+                <button id={styles.botaoProcurar} onClick={() => dispatch(alteraEstado("cargoExcluirEncontrado"))}>Procurar cargo</button>
+            </div>
         </div>
     </div>
   )

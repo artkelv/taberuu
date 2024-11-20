@@ -1,9 +1,12 @@
 #caixaNaoEncontrado{
-    margin: 50px 0;
+    margin: 15px 0;
+    border-bottom: 1px solid #757575;
+    padding-bottom: 15px;
 }
 #tituloNaoEncontrado{
     color: #F32323;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 #subTituloNaoEncontrado{
     color: #5B5B5B;

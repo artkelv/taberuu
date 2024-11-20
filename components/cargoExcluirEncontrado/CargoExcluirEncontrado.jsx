@@ -10,10 +10,10 @@ export default function CargoExcluirEncontrado() {
     return (
     <div id={padroes.container}>
         <div>
-            <div id={padroes.indicacao} className={padroes.indicacaoExcluir}>
+            <div id={padroes.indicacaoExcluir} >
                 <p>Voce está EXCLUINDO um cargo</p>
             </div>
-            <div id={padroes.primeiroConteudo}>
+            <div id={padroes.conteudo}>
                 <div>
                     <p id={styles.descricao}>Cargo encontrado e pronto para ser excluido!</p>
                 </div>
@@ -23,9 +23,11 @@ export default function CargoExcluirEncontrado() {
                 </div>
             </div>
         </div>
-        <div id={padroes.caixaDeBotoes}>   
-            <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>voltar</button>
-            <button id={padroes.botao} className={padroes.botaoExcluirCargo} onClick={() => dispatch(alteraEstado("cargoExcluidoComSucesso"))}>Excluir Cargo</button>
+        <div id={padroes.segundoContainer}>
+            <div id={padroes.caixaDosBotoes}>   
+                <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>voltar</button>
+                <button id={padroes.botaoCargoExcluir} onClick={() => dispatch(alteraEstado("cargoExcluidoComSucesso"))}>Excluir Cargo</button>
+            </div>
         </div>
     </div>
   )
