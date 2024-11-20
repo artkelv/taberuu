@@ -28,24 +28,24 @@ export default function CargoEditar() {
 
   return (
     <div id={padroes.container}>
-        <div id={padroes.indicacao} className={padroes.indicacaoCargo}>
-            <p>Voce está EDITANDO um cargo!</p>
-        </div> 
-        <div id={styles.caixaLocalizarEbotoes}>
-            <div id={padroes.subContainer}>
+        <div>
+            <div id={padroes.indicacao} className={padroes.indicacaoCargo}>
+                <p>Voce está EDITANDO um cargo!</p>
+            </div> 
+            <div id={padroes.conteudo}>
                 <div id={styles.localizarCargo}>
                     <p>ATENÇÃO: Para editarmos um cargo primeiro precisamos localiza-lo! Comece procurando pelo nome do cargo</p>
                 </div>
-                <form action="">
-                    <div className={padroes.caixaDasEntradas}>
-                        <label className={padroes.titulo} htmlFor="">Nome do cargo</label>
-                        <input className={padroes.entradaPequena} type="text" placeholder="Infome o nome do cargo"/>
-                    </div>
-                </form>
+                <div className={padroes.caixaDasEntradas}>
+                    <label className={padroes.titulo} htmlFor="">Nome do cargo</label>
+                    <input className={padroes.entradaPequena} type="text" placeholder="Infome o nome do cargo"/>
+                </div>
             </div>
-            <div id={padroes.caixaDeBotoes}>
+        </div>
+        <div id={padroes.segundoContainer}>
+            <div id={padroes.caixaDosBotoes}>
                 <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
-                <button id={padroes.botao} className={padroes.botaoCargo} onClick={() => retornoDaPesquisa()}>Buscar cargo</button>
+                <button id={padroes.botaoCargo} onClick={() => retornoDaPesquisa()}>Buscar cargo</button>
             </div>
         </div>
     </div>

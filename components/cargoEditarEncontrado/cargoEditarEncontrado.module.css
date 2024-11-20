@@ -4,8 +4,16 @@
 }
 #cargoEncontrado{
     color: #06C167;
+    font-weight: 700;
+    padding-bottom: 15px;
 }
 #idDaVaga{
     color: #06C167;
     margin-top: 10px;
+}
+#conteudoPersonalizado{
+    padding: 30px 30px 0 30px;
+}
+#segundoContainerPersonalizado{
+    padding: 0 30px 30px 30px;
 }

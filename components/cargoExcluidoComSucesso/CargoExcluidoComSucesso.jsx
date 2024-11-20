@@ -11,15 +11,17 @@ export default function CargoExcluidoComSucesso() {
   return (
     <div id={padroes.container}>
         <div>
-          <div id={padroes.indicacao} className={padroes.indicacaoExcluir}>
+          <div id={padroes.indicacaoExcluir} className={padroes.indicacaoExcluir}>
             <p>Voce está EXCLUINDO um cargo!</p>
           </div>
           <div id={styles.balaoExcluidoComSucesso}>
             <p>Cargo Excluido com sucesso!</p>
           </div>
         </div>
-        <div id={padroes.caixaDeBotoes}>
-          <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
+        <div id={padroes.segundoContainer}>
+          <div id={padroes.caixaDeBotoes}>
+            <button id={padroes.botaoVoltar} onClick={() => dispatch(alteraEstado("voltarParaCargo"))}>Voltar</button>
+          </div>
         </div>
     </div>
   )

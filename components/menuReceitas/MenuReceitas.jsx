@@ -8,6 +8,7 @@ import styles from "@/styles/menu.module.css";
 import imgCriar from "@/public/img/criar.png";
 import imgEditar from "@/public/img/editar.png";
 import imgExcluir from "@/public/img/excluir.png";
+import imageImprimir from "@/public/img/imprimir.png"
 
 import Image from 'next/image';
 
@@ -32,15 +33,60 @@ export default function MenuReceitas() {
             </div>
           </div>    
         </div>
-        <div>
+        <div id={styles.caixaPersonalizadaReceitas} onClick={() => alert("Aguarde a impressao de todas as receitas...")}>
           <h4 id={styles.titulo}>Receitas Cadastradas</h4>
+          <div id={styles.caixaImprimiReceitas}>
+            <p>Imprimir todas as receitas</p>
+            <Image className={styles.imageImprimir} src={imageImprimir}/>
+          </div>
         </div>
         <div id={styles.linhaBranca}></div>
         <div id={styles.itensCadastrados}>
-          <div className={styles.cadastrados}>Arthur</div>
-          <div className={styles.cadastrados}>Gessiel</div>
-          <div className={styles.cadastrados}>Vinicius</div>
-          <div className={styles.cadastrados}>Joao</div>
+          <div className={styles.teste} onClick={() => alert("Aguarde a impressao!")}>
+            <div>
+              <p>Bolo de chocolate</p>
+            </div>
+            <div className={styles.caixaImprimirReceitas}>
+              <Image className={styles.imageImprimir} src={imageImprimir}/>
+              <p>Imprimir receita</p>
+            </div>
+          </div>
+          <div className={styles.teste} onClick={() => alert("Aguarde a impressao!")}>
+            <div>
+              <p>Cuscuz</p>
+            </div>
+            <div className={styles.caixaImprimirReceitas}>
+              <Image className={styles.imageImprimir} src={imageImprimir}/>
+              <p>Imprimir receita</p>
+            </div>
+          </div>
+          <div className={styles.teste} onClick={() => alert("Aguarde a impressao!")}>
+            <div>
+              <p>Churrasco</p>
+            </div>
+            <div className={styles.caixaImprimirReceitas}>
+              <Image className={styles.imageImprimir} src={imageImprimir}/>
+              <p>Imprimir receita</p>
+            </div>
+          </div>
+          <div className={styles.teste} onClick={() => alert("Aguarde a impressao!")}>
+            <div>
+              <p>Macarronada</p>
+            </div>
+            <div className={styles.caixaImprimirReceitas}>
+              <Image className={styles.imageImprimir} src={imageImprimir}/>
+              <p>Imprimir receita</p>
+            </div>
+          </div>
+          <div className={styles.teste} onClick={() => alert("Aguarde a impressao!")}>
+            <div>
+              <p>Bolo de fubá</p>
+            </div>
+            <div className={styles.caixaImprimirReceitas}>
+              <Image className={styles.imageImprimir} src={imageImprimir}/>
+              <p>Imprimir receita</p>
+            </div>
+          </div>
         </div>
     </div> 
   )

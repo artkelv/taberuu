@@ -88,6 +88,9 @@ import CategoriaEditadaComSucesso from "@/components/categoriaEditadaComSucesso/
 import CategoriaExcluirNaoEncontrada from "@/components/categoriaExcluirNaoEncontrada/CategoriaExcluirNaoEncontrada";
 import CategoriaExcluirEncontrada from "@/components/categoriaExcluirEncontrada/CategoriaExcluirEncontrada";
 import CategoriaExcluidaComSucesso from "@/components/categoriaExcluidaComSucesso/CategoriaExcluidaComSucesso";
+import Filtro from "@/components/filtro/Filtro";
+import FiltroResultado from "@/components/filtroRelatorio/FiltroRelatorio";
+import FiltroRelatorio from "@/components/filtroRelatorio/FiltroRelatorio";
 
 function Home(){
     const [tela, setTela] = useState();
@@ -280,7 +283,13 @@ function Home(){
        }else if(stateEstadoPrincipal === "categoriaExcluidaComSucesso"){
            setTela(<CategoriaExcluidaComSucesso/>)
            //--------------- AQUI ACABA O IF DO MENU CATEGORIA ---------------
-       }else if(stateEstadoPrincipal === "voltar"){
+       }else if(stateEstadoPrincipal === "filtro"){
+            setTela(<Filtro/>)
+       }else if (stateEstadoPrincipal === "filtroRelatorio"){
+            setTela(<FiltroRelatorio/>)
+       }
+            //--------------- AQUI ACABA O IF DO FILTRO ---------------
+       else if(stateEstadoPrincipal === "voltar"){
        setTela(<MenuPrincipal/>)
        }else{
        setTela(<MenuPrincipal/>)
