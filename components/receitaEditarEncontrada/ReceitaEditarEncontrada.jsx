@@ -63,6 +63,12 @@ export default function ReceitaEditarEncontrada() {
                 <input className={padroes.entradaGrande} type="text" placeholder="Como deve ser feito a receita"/>
               </div>
             </div>
+            <div>
+              <div className={padroes.caixaDasEntradasGrandes}>
+                <label className={padroes.titulo} htmlFor="">Ingredientes</label>
+                <input className={padroes.entradaGrande} type="text" placeholder="Insira aqui todos os ingredientes necessarios para se criar a receita. Exemplo: amido de milho, azeite, manteiga"/>
+              </div>
+            </div>
             <div id={padroes.anexarFotosDaReceita}>
               <div id={padroes.subConteudoFotosDaReceita}>
                 <p id={padroes.tituloFotos}>Imagem da Receita</p>

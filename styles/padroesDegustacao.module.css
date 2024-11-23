@@ -10,7 +10,7 @@
     text-align: center;
     color: #fff;
     padding: 10px;
-    background-color: #5E2C63;
+    background-color: #E08E45;
 }
 #indicacaoExcluir{
     text-align: center;
@@ -39,6 +39,14 @@
     border-radius: 10px;
     padding-left: 15px;
 }
+.entradaMedia{
+    height: 60px;
+    width: 100%;
+    border: none;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    padding-left: 15px;
+}
 #segundoContainer{
     padding: 30px;
 }
@@ -58,19 +66,19 @@
         background-color: #181818;
     }
 }
-#botaoMedida{
+#botaoDegustacao{
     width: 200px;
     height: 40px;
     color: #fff;
     border: none;
     border-radius: 10px;
-    background-color: #5E2C63;
+    background-color: #E08E45;
     &:hover{
         cursor: pointer;
-        background-color: #56175c;
+        background-color: #E08E45;
     }
 }
-#botaoMedidaExcluir{
+#botaoDegustacaoExcluir{
     width: 200px;
     height: 40px;
     color: #fff;

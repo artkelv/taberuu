@@ -1,0 +1,89 @@
+#container{
+    display: flex;
+    height: 100vh;
+}
+#primeiroContainer{
+    width: 50%;
+    padding: 40px 80px;
+}
+#tituloCadastro{
+    color: #06C167;
+    margin-bottom: 15px;
+}
+#descricaoEfetuarLogin{
+    color: #757575; 
+    margin-bottom: 15px;
+}
+.caixaDasEntradas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.entradas{
+    border: 1px solid #06C167;
+    height: 50px;
+    border-radius: 10px;
+    width: 250px;
+    padding-left: 15px;
+}
+#descricaoFotoPerfil{
+    color: #757575;
+    margin-bottom: 15px;
+}
+#entradaFile{
+    padding: 5px;
+    width: 100%;
+    background-color: #06C167;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#entradaChecked{
+
+}
+#caixaLembrar{
+    margin-bottom: 30px;
+}
+#lembrarAqui{
+    color: #06C167;
+    margin-left: 15px;
+    font-size: 12px;
+}
+#btnCadastrar{
+    width: 100%;
+    padding: 15px 0;
+    background-color: #000;
+    text-align: center;
+    color: #06C167;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        background-color: #1f1f1f;
+        cursor: pointer;
+    }
+}
+#segundoContainer{
+    width: 50%;
+    background-color: rgb(160, 160, 214);
+    background-image: url(../public/img/fundo_cadastro.jpg);
+    background-size: cover;
+    background-position: 0 -100px;
+    display: flex;
+    align-items: center;
+}
+#fundoPreto{
+    background-color: #1E1E1E;
+    padding: 30px 50px;
+    width: 100%;
+}
+#taberu{
+    color: #fff;
+    margin-bottom: 15px;
+}
+#food{
+    color: #06C167;
+    margin-bottom: 15px;
+}
+#descricaoTaberu{
+    color: #9D9D9D;
+    font-size: 15px;
+}

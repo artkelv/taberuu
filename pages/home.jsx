@@ -15,6 +15,8 @@ import MenuIngredientes from "@/components/menuIngredientes/MenuIngredientes";
 import MenuRestaurantes from "@/components/menuRestaurantes/MenuRestaurantes";
 import MenuMedidas from "@/components/menuMedidas/MenuMedidas";
 import MenuCategorias from "@/components/menuCategorias/MenuCategorias";
+import MenuDegustacao from "@/components/menuDegustacao/MenuDegustacao";
+import MenuLateralDegustacao from "@/components/menuLateralDegustacao/MenuLateralDegustacao";
 
 import CargoCriar from "@/components/cargoCriar/CargoCriar";
 import CargoEditar from "@/components/cargoEditar/CargoEditar";
@@ -48,6 +50,7 @@ import ReceitaEditadaComSucesso from "@/components/receitaEditadaComSucesso/Rece
 import ReceitaExcluirNaoEncontrada from "@/components/receitaExcluirNaoEncontrada/ReceitaExcluirNaoEncontrada";
 import ReceitaExcluirEncontrada from "@/components/receitaExcluirEncontrada/ReceitaExcluirEncontrada";
 import ReceitaExcluidaComSucesso from "@/components/receitaExcluidaComSucesso/ReceitaExcluidaComSucesso";
+
 import IngredienteCriar from "@/components/ingredienteCriar/IngredienteCriar";
 import IngredienteEditar from "@/components/ingredienteEditar/IngredienteEditar";
 import IngredienteExcluir from "@/components/ingredienteExcluir/IngredienteExcluir";
@@ -58,6 +61,7 @@ import IngredienteEditadoComSucesso from "@/components/ingredienteEditadoComSuce
 import IngredienteExcluirNaoEncontrado from "@/components/ingredienteExcluirNaoEncontrado/IngredienteExcluirNaoEncontrado";
 import IngredienteExcluirEncontrado from "@/components/ingredienteExcluirEncontrado/IngredienteExcluirEncontrado";
 import IngredienteExcluidoComSucesso from "@/components/ingredienteExcluidoComSucesso/IngredienteExcluidoComSucesso";
+
 import RestauranteCriar from "@/components/restauranteCriar/RestauranteCriar";
 import RestauranteEditar from "@/components/restauranteEditar/RestauranteEditar";
 import RestauranteExcluir from "@/components/restauranteExcluir/RestauranteExcluir";
@@ -68,6 +72,7 @@ import RestauranteEditadoComSucesso from "@/components/restauranteEditadoComSuce
 import RestauranteExcluirNaoEncontrado from "@/components/restauranteExcluirNaoEncontrado/RestauranteExcluirNaoEncontrado";
 import RestauranteExcluirEncontrado from "@/components/restauranteExcluirEncontrado/RestauranteExcluirEncontrado";
 import RestauranteExcluidoComSucesso from "@/components/restauranteExcluidoComSucesso/RestauranteExcluidoComSucesso";
+
 import MedidaCriar from "@/components/medidaCriar/MedidaCriar";
 import MedidaEditar from "@/components/medidaEditar/MedidaEditar";
 import MedidaExcluir from "@/components/medidaExcluir/MedidaExcluir";
@@ -78,6 +83,7 @@ import MedidaEditadaComSucesso from "@/components/medidaEditadaComSucesso/Medida
 import MedidaExcluirNaoEncontrada from "@/components/medidaExcluirNaoEncontrada/MedidaExcluirNaoEncontrada";
 import MedidaExcluirEncontrada from "@/components/medidaExcluirEncontrada/MedidaExcluirEncontrada";
 import MedidaExcluidaComSucesso from "@/components/medidaExcluidaComSucesso/MedidaExcluidaComSucesso";
+
 import CategoriaCriar from "@/components/categoriaCriar/CategoriaCriar";
 import CategoriaEditar from "@/components/categoriaEditar/CategoriaEditar";
 import CategoriaExcluir from "@/components/categoriaExcluir/CategoriaExcluir";
@@ -88,9 +94,21 @@ import CategoriaEditadaComSucesso from "@/components/categoriaEditadaComSucesso/
 import CategoriaExcluirNaoEncontrada from "@/components/categoriaExcluirNaoEncontrada/CategoriaExcluirNaoEncontrada";
 import CategoriaExcluirEncontrada from "@/components/categoriaExcluirEncontrada/CategoriaExcluirEncontrada";
 import CategoriaExcluidaComSucesso from "@/components/categoriaExcluidaComSucesso/CategoriaExcluidaComSucesso";
+
 import Filtro from "@/components/filtro/Filtro";
-import FiltroResultado from "@/components/filtroRelatorio/FiltroRelatorio";
 import FiltroRelatorio from "@/components/filtroRelatorio/FiltroRelatorio";
+
+import DegustarCriar from "@/components/degustarCriar/DegustarCriar";
+import DegustarCriadoComSucesso from "@/components/degustarCriadoComSucesso/DegustarCriadoComSucesso";
+import DegustarEditar from "@/components/degustarEditar/DegustarEditar";
+import DegustarEditarNaoEncontrado from "@/components/degustarEditarNaoEncontrado/DegustarEditarNaoEncontrado";
+import DegustarEditarEncontrado from "@/components/degustarEditarEncontrado/DegustarEditarEncontrado";
+import DegustarEditadoComSucesso from "@/components/degustarEditadoComSucesso/DegustarEditadoComSucesso";
+import DegustarExcluir from "@/components/degustarExcluir/DegustarExcluir";
+import DegustarExcluirNaoEncontrado from "@/components/degustarExcluirNaoEncontrado/DegustarExcluirNaoEncontrado";
+import DegustarExcluirEncontrado from "@/components/desgustarExcluirEncontrado/DegustarExcluirEncontrado";
+import DegustarExcluidoComSucesso from "@/components/degustarExcluidoComSucesso/DegustarExcluidoComSucesso";
+
 
 function Home(){
     const [tela, setTela] = useState();
@@ -114,8 +132,11 @@ function Home(){
         setTela(<MenuMedidas/>)
        }else if(stateEstadoPrincipal === "menuCategorias"){
         setTela(<MenuCategorias/>)
-        //--------------- AQUI ACABA O IF DO MENU LATERAL CARGO ---------------
-       }else if(stateEstadoPrincipal === "criarCargo"){
+       }else if(stateEstadoPrincipal === "menuDegustacao"){
+        setTela(<MenuDegustacao/>)
+       }
+       //--------------- AQUI ACABA O IF DO MENU LATERAL CARGO ---------------
+       else if(stateEstadoPrincipal === "criarCargo"){
         setTela(<CargoCriar/>)
        }else if(stateEstadoPrincipal === "editarCargo"){
         setTela(<CargoEditar/>)
@@ -283,6 +304,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "categoriaExcluidaComSucesso"){
            setTela(<CategoriaExcluidaComSucesso/>)
            //--------------- AQUI ACABA O IF DO MENU CATEGORIA ---------------
+       }else if(stateEstadoPrincipal === "criarDegustacao"){
+           setTela(<DegustarCriar/>)
+       }else if(stateEstadoPrincipal === "editarDegustacao"){
+           setTela(<DegustarEditar/>)
+       }else if(stateEstadoPrincipal === "excluirDegustacao"){
+           setTela(<DegustarExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaDegustacao"){
+           setTela(<MenuDegustacao/>)
+           //--------------- AQUI ACABA O IF DO MENU DEGUSTAR ---------------
+       }else if(stateEstadoPrincipal === "degustarCriadaComSucesso"){
+           setTela(<DegustarCriadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "degustarEditarEncontrada"){
+           setTela(<DegustarEditarEncontrado/>)
+       }else if(stateEstadoPrincipal === "degustarEditarNaoEncontrada"){
+           setTela(<DegustarEditarNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "degustarEditadaComSucesso"){
+           setTela(<DegustarEditadoComSucesso/>)
+       }else if(stateEstadoPrincipal === "degustarExcluirNaoEncontrada"){
+           setTela(<DegustarExcluirNaoEncontrado/>)
+       }else if(stateEstadoPrincipal === "degustarExcluirEncontrada"){
+           setTela(<DegustarExcluirEncontrado/>)
+       }else if(stateEstadoPrincipal === "degustarExcluidaComSucesso"){
+           setTela(<DegustarExcluidoComSucesso/>)
+           //--------------- AQUI ACABA O IF DO MENU DEGUSTAR ---------------
        }else if(stateEstadoPrincipal === "filtro"){
             setTela(<Filtro/>)
        }else if (stateEstadoPrincipal === "filtroRelatorio"){
@@ -303,7 +348,7 @@ function Home(){
 
     return (
         <div id={styles.container}>
-            <MenuLateral />
+            <MenuLateralDegustacao />
             <div id={styles.conteudoPrincipal}>
                 <div>
                     <h4 id={styles.textoTitulo}>Seja bem vindo,<strong id={styles.subtextoP}> ADMINISTRADOR MASTER!</strong></h4>
