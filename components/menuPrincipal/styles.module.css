@@ -28,7 +28,7 @@
     width: 180px;
     height: 35px;
     border-radius: 5px;
-    background-color: #000;
+    background-color: #1E1E1E;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -41,8 +41,8 @@
       margin: 30px 0;
     }
   #boxCardsUnico {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     background-color: #06c167;
     border-radius: 5px;
     display: flex;
@@ -51,8 +51,8 @@
     align-items: center;
   }
   .boxCards {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     background-color: #1e1e1e;
     border-radius: 5px;
     display: flex;

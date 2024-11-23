@@ -16,7 +16,7 @@ export default function MenuPrincipal() {
             <div id={styles.boxContainer}>
                 <div id={styles.boxCardsUnico}>
                     <h4 className={styles.tetxoTituloCards}>10</h4>
-                    <p className={styles.tetxoCards}>Cargos criados</p>
+                    <p className={styles.tetxoCards}>Cargos</p>
                 </div>
                 <div className={styles.boxCards}>
                     <h4 className={styles.tetxoTituloCards}>20</h4>
@@ -33,6 +33,14 @@ export default function MenuPrincipal() {
                 <div className={styles.boxCards}>
                     <h4 className={styles.tetxoTituloCards}>896</h4>
                     <p className={styles.tetxoCards}>Restaurantes</p>
+                </div>
+                <div className={styles.boxCards}>
+                    <h4 className={styles.tetxoTituloCards}>68</h4> 
+                    <p className={styles.tetxoCards}>Medidas</p>
+                </div>
+                <div className={styles.boxCards}>
+                    <h4 className={styles.tetxoTituloCards}>12</h4>
+                    <p className={styles.tetxoCards}>Categorias</p>
                 </div>
             </div>
             <h4 id={styles.tituloFinal}>

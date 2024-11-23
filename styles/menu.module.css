@@ -60,6 +60,13 @@
         background-color: #a39f25;
     }
 }
+#escolhaPrincipalDegustacao{
+    background-color: #E08E45;
+    &:hover{
+        cursor: pointer;
+        background-color: #E08E45;
+    }
+}
 .imgIcone{
     width: 25px;
     height: 25px;
