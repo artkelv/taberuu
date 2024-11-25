@@ -67,6 +67,13 @@
         background-color: #E08E45;
     }
 }
+#escolhaPrincipalMetas{
+    background-color: #4552E0;
+    &:hover{
+        cursor: pointer;
+        background-color: #353fac;
+    }
+}
 .imgIcone{
     width: 25px;
     height: 25px;
