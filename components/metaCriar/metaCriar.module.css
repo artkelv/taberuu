@@ -1,0 +1,8 @@
+#primeiroConteudo{
+    display: flex;
+    justify-content: space-between;
+}
+#segundoConteudo{
+    display: flex;
+    justify-content: space-between;
+}

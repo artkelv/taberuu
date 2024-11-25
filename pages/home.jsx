@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import MenuLateral from "@/components/menuLateral/menuLateral";
+import MenuLateralDegustacao from "@/components/menuLateralDegustacao/MenuLateralDegustacao";
+import MenuLateralMetas from "@/components/menuLateralMetas/MenuLateralMetas";
 import MenuPrincipal from "@/components/menuPrincipal/MenuPrincipal";
 import MenuCargo from "@/components/menuCargos/MenuCargos";
 import MenuFuncionarios from "@/components/menuFuncionarios/MenuFuncionarios";
@@ -16,7 +18,6 @@ import MenuRestaurantes from "@/components/menuRestaurantes/MenuRestaurantes";
 import MenuMedidas from "@/components/menuMedidas/MenuMedidas";
 import MenuCategorias from "@/components/menuCategorias/MenuCategorias";
 import MenuDegustacao from "@/components/menuDegustacao/MenuDegustacao";
-import MenuLateralDegustacao from "@/components/menuLateralDegustacao/MenuLateralDegustacao";
 
 import CargoCriar from "@/components/cargoCriar/CargoCriar";
 import CargoEditar from "@/components/cargoEditar/CargoEditar";
@@ -109,6 +110,18 @@ import DegustarExcluirNaoEncontrado from "@/components/degustarExcluirNaoEncontr
 import DegustarExcluirEncontrado from "@/components/desgustarExcluirEncontrado/DegustarExcluirEncontrado";
 import DegustarExcluidoComSucesso from "@/components/degustarExcluidoComSucesso/DegustarExcluidoComSucesso";
 
+import MetaCriar from "@/components/metaCriar/MetaCriar";
+import MetaEditar from "@/components/metaEditar/MetaEditar";
+import MetaExcluir from "@/components/metaExcluir/MetaExcluir";
+import MetaCriadaComSucesso from "@/components/metaCriadaComSucesso/MetaCriadaComSucesso";
+import MetaEditarEncontrada from "@/components/metaEditarEncontrada/MetaEditarEncontrada";
+import MetaEditarNaoEncontrada from "@/components/metaEditarNaoEncontrada/MetaEditarNaoEncontrada";
+import MetaEditadaComSucesso from "@/components/metaEditadaComSucesso/MetaEditadaComSucesso";
+import MetaExcluirNaoEncontrada from "@/components/metaExcluirNaoEncontrada/MetaExcluirNaoEncontrada";
+import MetaExcluirEncontrada from "@/components/metaExcluirEncontrada/MetaExcluirEncontrada";
+import MetaExcluidaComSucesso from "@/components/metaExcluidaComSucesso/MetaExcluidaComSucesso";
+import MenuMetas from "@/components/menuMetas/MenuMetas";
+
 
 function Home(){
     const [tela, setTela] = useState();
@@ -134,6 +147,8 @@ function Home(){
         setTela(<MenuCategorias/>)
        }else if(stateEstadoPrincipal === "menuDegustacao"){
         setTela(<MenuDegustacao/>)
+       }else if(stateEstadoPrincipal === "menuMetas"){
+        setTela(<MenuMetas/>)
        }
        //--------------- AQUI ACABA O IF DO MENU LATERAL CARGO ---------------
        else if(stateEstadoPrincipal === "criarCargo"){
@@ -328,6 +343,30 @@ function Home(){
        }else if(stateEstadoPrincipal === "degustarExcluidaComSucesso"){
            setTela(<DegustarExcluidoComSucesso/>)
            //--------------- AQUI ACABA O IF DO MENU DEGUSTAR ---------------
+       }else if(stateEstadoPrincipal === "criarMeta"){
+        setTela(<MetaCriar/>)
+       }else if(stateEstadoPrincipal === "editarMeta"){
+          setTela(<MetaEditar/>)
+       }else if(stateEstadoPrincipal === "excluirMeta"){
+          setTela(<MetaExcluir/>)
+       }else if(stateEstadoPrincipal === "voltarParaMeta"){
+          setTela(<MenuMetas/>)
+          //--------------- AQUI ACABA O IF DO MENU METAS ---------------
+       }else if(stateEstadoPrincipal === "metaCriadaComSucesso"){
+          setTela(<MetaCriadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "metaEditarEncontrada"){
+          setTela(<MetaEditarEncontrada/>)
+       }else if(stateEstadoPrincipal === "metaEditarNaoEncontrada"){
+          setTela(<MetaEditarNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "metaEditadaComSucesso"){
+          setTela(<MetaEditadaComSucesso/>)
+       }else if(stateEstadoPrincipal === "metaExcluirNaoEncontrada"){
+          setTela(<MetaExcluirNaoEncontrada/>)
+       }else if(stateEstadoPrincipal === "metaExcluirEncontrada"){
+          setTela(<MetaExcluirEncontrada/>)
+       }else if(stateEstadoPrincipal === "metaExcluidaComSucesso"){
+          setTela(<MetaExcluidaComSucesso/>)
+          //--------------- AQUI ACABA O IF DO MENU METAS ---------------
        }else if(stateEstadoPrincipal === "filtro"){
             setTela(<Filtro/>)
        }else if (stateEstadoPrincipal === "filtroRelatorio"){
@@ -345,10 +384,9 @@ function Home(){
         renderizaTelaEscolhida()
     },[stateEstadoPrincipal])
 
-
     return (
         <div id={styles.container}>
-            <MenuLateralDegustacao />
+            <MenuLateralMetas /> 
             <div id={styles.conteudoPrincipal}>
                 <div>
                     <h4 id={styles.textoTitulo}>Seja bem vindo,<strong id={styles.subtextoP}> ADMINISTRADOR MASTER!</strong></h4>

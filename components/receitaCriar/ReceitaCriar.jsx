@@ -22,7 +22,7 @@ export default function ReceitaCriar() {
           <p>Voce está CRIANDO uma receita</p>
         </div>
         <div id={padroes.conteudo}>
-          <div className={padroes.primeiroConteudo}>
+          <div id={padroes.primeiroConteudo}>
             <div className={padroes.caixaDasEntradas}>
               <label className={padroes.titulo} htmlFor="">Nome da receita* </label>
               <input className={padroes.entradaPequena} type="text" placeholder="Insira o RG do Funcionario"/>
@@ -36,7 +36,7 @@ export default function ReceitaCriar() {
               <input className={padroes.entradaPequena} type="text" placeholder="Insira o RG do Funcionario"/>
             </div>
           </div>
-          <div className={padroes.primeiroConteudo}>
+          <div id={padroes.segundoConteudo}>
             <div className={padroes.caixaDasEntradas}>
               <label className={padroes.titulo} htmlFor="">Data de criação</label>
               <input className={padroes.entradaPequena} type="text" placeholder="Insira o RG do Funcionario"/>
