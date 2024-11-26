@@ -1,6 +1,18 @@
 import sytles from "@/styles/index.module.css";
 
 export default function Index() {
+
+  function pegaUsuarioLogado(){
+    axios.post('http://localhost:3003/login/{usuario}')
+
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log(error.message)
+    })
+  }
+
   return (
       <div id={sytles.boxLogin}>
         <div id={sytles.boxEsquerdo}>

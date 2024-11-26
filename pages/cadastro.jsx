@@ -1,5 +1,7 @@
 import styles from "@/styles/cadastro.module.css";
 
+import { useDispatch, useSelector } from "react-redux";
+
 export default function Cadastro() {
   return (
     <div id={styles.container}>
@@ -10,8 +12,8 @@ export default function Cadastro() {
         </div>
         <div>
           <div className={styles.caixaDasEntradas}>
-            <input className={styles.entradas} type="email" placeholder="Email" />
-            <select name="" className={styles.entradas}>
+            <input className={styles.entradas} type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+            <select name="" className={styles.entradas} onChange={(e) => setCargo(e.target.value)}>
               <option value="">Escolha o cargo</option>
               <option value="">Administrador</option>
               <option value="">Cozinheiro</option>
@@ -20,12 +22,12 @@ export default function Cadastro() {
             </select>
           </div>
           <div className={styles.caixaDasEntradas}>
-            <input className={styles.entradas} type="text" placeholder="Nome Completo" />
-            <input className={styles.entradas} type="text" placeholder="Data de nascimento" />
+            <input className={styles.entradas} type="text" placeholder="Nome Completo" onChange={(e) => setNomeCompleto(e.target.value)}/>
+            <input className={styles.entradas} type="text" placeholder="Data de nascimento" onChange={(e) => setDataNascimento(e.target.value)}/>
           </div>
           <div className={styles.caixaDasEntradas}>
-            <input className={styles.entradas} type="text" placeholder="Numero de telefone" />
-            <input className={styles.entradas} type="text" placeholder="CPF" />
+            <input className={styles.entradas} type="text" placeholder="Numero de telefone" onChange={(e) => setTelefone(e.target.value)}/>
+            <input className={styles.entradas} type="text" placeholder="CPF" onChange={(e) => setCPF(e.target.value)}/>
           </div>
         </div>
         <div>

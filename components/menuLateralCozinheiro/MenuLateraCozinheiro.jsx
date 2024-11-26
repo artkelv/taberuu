@@ -2,20 +2,33 @@ import imgMetas from "@/public/img/img_metas.png";
 import imagemPerfil from "@/public/img/image.png";
 import imgSair from "@/public/img/sair.png";
 import imgHome from "@/public/img/home.png";
+import imaIngrediantes from "@/public/img/ingredientes.png";
+import imgMedidas from "@/public/img/medidas.png";
+import imgReceitas from "@/public/img/receitas.png";
+import { useRouter } from "next/router";
 
-import styles from "./menuLateralMetas.module.css";
+import styles from "./menuLateralCozinheiro.module.css";
 
 import Image from "next/image";
 
 import { useDispatch } from "react-redux";
 import { alteraEstado } from "@/pages/redux/estadoPrincipal/estadoPrincipalSlice";
 
-export default function MenuLateralMetas() {
+export default function MenuLateralCozinheiro() {
+    const router = useRouter();
     const dispatch = useDispatch();
 
     function renderizaTelaDeConteudo(parametro){
         if(parametro === "menuHome"){
           dispatch(alteraEstado("menuHome"))
+        }else if(parametro === "menuCozinheiro"){
+          dispatch(alteraEstado("menuCozinheiro"))
+        }else if(parametro === "menuReceitas"){
+          dispatch(alteraEstado("menuReceitas"))
+        }else if(parametro === "menuMedidas"){
+          dispatch(alteraEstado("menuMedidas"))
+        }else if(parametro === "menuIngredientes"){
+          dispatch(alteraEstado("menuIngredientes"))
         }else if(parametro === "menuMetas"){
           dispatch(alteraEstado("menuMetas"))
         }
@@ -34,6 +47,30 @@ export default function MenuLateralMetas() {
             </div>
             <div>
               <h5 className={styles.titulo}>Home</h5>
+            </div>
+          </div>
+          <div className={styles.boxMenu} onClick={() => renderizaTelaDeConteudo("menuReceitas")}>
+            <div>
+              <Image className={styles.icons} src={imgReceitas} alt="imagem home" />
+            </div>
+            <div>
+              <h5 className={styles.titulo}>Receitas</h5>
+            </div>
+          </div>
+          <div className={styles.boxMenu} onClick={() => renderizaTelaDeConteudo("menuMedidas")}>
+            <div>
+              <Image className={styles.icons} src={imgMedidas} alt="imagem home"/>
+            </div>
+            <div>
+              <h5 className={styles.titulo}>Medidas</h5>
+            </div>
+          </div>
+          <div className={styles.boxMenu} onClick={() => renderizaTelaDeConteudo("menuIngredientes")}>
+            <div>
+              <Image className={styles.icons} src={imaIngrediantes} alt="imagem home" />
+            </div>
+            <div>
+              <h5 className={styles.titulo}>Ingredientes</h5>
             </div>
           </div>
           <div className={styles.boxMenu} onClick={() => renderizaTelaDeConteudo(dispatch(alteraEstado("menuMetas")))}>
@@ -60,7 +97,7 @@ export default function MenuLateralMetas() {
             <p id={styles.emailInformacao}>Gessiel.sp@gmail.com</p>
           </div>
         </div>
-        <button id={styles.bntSair}>
+        <button id={styles.btnSair} onClick={() => router.push('/')}>
           <Image className={styles.imgIcons} src={imgSair} alt="imagem home" />
           Sair
         </button>
