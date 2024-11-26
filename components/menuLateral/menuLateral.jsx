@@ -5,9 +5,7 @@ import imagemPerfil from "@/public/img/image.png";
 import imgCargos from "@/public/img/cargos.png";
 import imgCategoria from "@/public/img/categoria.png";
 import imgfuncionarios from "@/public/img/funcionarios.png";
-import imaIngrediantes from "@/public/img/ingredientes.png";
-import imgMeidads from "@/public/img/medidas.png";
-import imgReceitas from "@/public/img/receitas.png";
+
 import imgRestaurante from "@/public/img/restaurante.png";
 import imgSair from "@/public/img/sair.png";
 
@@ -15,9 +13,10 @@ import styles from "./styles.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { alteraEstado } from "@/pages/redux/estadoPrincipal/estadoPrincipalSlice";
+import { useRouter } from "next/router";
 
 export default function MenuLateral() {
-
+  const router = useRouter();
   const dispatch = useDispatch();
 
   function renderizaTelaDeConteudo(parametro){
@@ -76,26 +75,6 @@ export default function MenuLateral() {
             <h5 className={styles.titulo}>Funcionarios</h5>
           </li>
         </div>
-        <div className={styles.subListMain} onClick={() => renderizaTelaDeConteudo("menuReceitas")}>
-          <li className={styles.subList}>
-            <Image
-              className={styles.imgIcons}
-              src={imgReceitas}
-              alt="imagem home"
-            />
-            <h5 className={styles.titulo}>Receitas</h5>
-          </li>
-        </div>
-        <div className={styles.subListMain} onClick={() => renderizaTelaDeConteudo("menuIngredientes")}>
-          <li className={styles.subList}>
-            <Image
-              className={styles.imgIcons}
-              src={imaIngrediantes}
-              alt="imagem home"
-            />
-            <h5 className={styles.titulo}>Ingredientes</h5>
-          </li>
-        </div>
         <div className={styles.subListMain} onClick={() => renderizaTelaDeConteudo("menuRestaurantes")}>
           <li className={styles.subList}>
             <Image
@@ -104,16 +83,6 @@ export default function MenuLateral() {
               alt="imagem home"
             />
             <h5 className={styles.titulo}>Restaurantes</h5>
-          </li>
-        </div>
-        <div className={styles.subListMain} onClick={() => renderizaTelaDeConteudo("menuMedidas")}>
-          <li className={styles.subList}>
-            <Image
-              className={styles.imgIcons}
-              src={imgMeidads}
-              alt="imagem home"
-            />
-            <h5 className={styles.titulo}>Medidas</h5>
           </li>
         </div>
         <div className={styles.subListMain} onClick={() => renderizaTelaDeConteudo("menuCategorias")}>
@@ -140,7 +109,7 @@ export default function MenuLateral() {
           <p id={styles.emialInformacao}>Gessiel.sp@gmail.com</p>
         </div>
       </div>
-        <button id={styles.bntSair}>
+        <button id={styles.btnSair} onClick={() => router.push('/')}>
           <Image className={styles.imgIcons} src={imgSair} alt="imagem home" />
           Sair
         </button>

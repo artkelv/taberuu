@@ -85,7 +85,7 @@
       margin-top: 10px;
   
   }
-  #bntSair{
+  #btnSair{
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -94,4 +94,8 @@
       height: 40px;
       color: #000;
       border: none;
+      &:hover{
+        background-color: #a7a7a7;
+        cursor: pointer;
+      }
   }

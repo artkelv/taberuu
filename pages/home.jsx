@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import MenuLateral from "@/components/menuLateral/menuLateral";
-import MenuLateralDegustacao from "@/components/menuLateralDegustacao/MenuLateralDegustacao";
-import MenuLateralMetas from "@/components/menuLateralMetas/MenuLateralMetas";
+import MenuLateralDegustador from "@/components/menuLateralDegustador/MenuLateralDegustador";
+import MenuLateralCozinheiro from "@/components/menuLateralCozinheiro/MenuLateraCozinheiro";
 import MenuPrincipal from "@/components/menuPrincipal/MenuPrincipal";
 import MenuCargo from "@/components/menuCargos/MenuCargos";
 import MenuFuncionarios from "@/components/menuFuncionarios/MenuFuncionarios";
@@ -18,6 +18,7 @@ import MenuRestaurantes from "@/components/menuRestaurantes/MenuRestaurantes";
 import MenuMedidas from "@/components/menuMedidas/MenuMedidas";
 import MenuCategorias from "@/components/menuCategorias/MenuCategorias";
 import MenuDegustacao from "@/components/menuDegustacao/MenuDegustacao";
+import MenuMetas from "@/components/menuMetas/MenuMetas";
 
 import CargoCriar from "@/components/cargoCriar/CargoCriar";
 import CargoEditar from "@/components/cargoEditar/CargoEditar";
@@ -120,13 +121,23 @@ import MetaEditadaComSucesso from "@/components/metaEditadaComSucesso/MetaEditad
 import MetaExcluirNaoEncontrada from "@/components/metaExcluirNaoEncontrada/MetaExcluirNaoEncontrada";
 import MetaExcluirEncontrada from "@/components/metaExcluirEncontrada/MetaExcluirEncontrada";
 import MetaExcluidaComSucesso from "@/components/metaExcluidaComSucesso/MetaExcluidaComSucesso";
-import MenuMetas from "@/components/menuMetas/MenuMetas";
 
 
 function Home(){
     const [tela, setTela] = useState();
+    const [menuLateral, setMenuLateral] = useState();
 
     const stateEstadoPrincipal = useSelector(state => state.estadoPrincipal.value);
+
+    function renderizaMenuCorreto(){
+        if(stateCargo === "administrador"){
+            setMenuLateral(<MenuLateral/>)
+        }else if(stateCargo === "degustador"){
+            setMenuLateral(<MenuLateralDegustador/>)
+        }else if(stateCargo === "cozinheiro"){
+            setMenuLateral(<MenuLateralCozinheiro/>)
+        }
+    }
 
     function renderizaTelaEscolhida(){
        if(stateEstadoPrincipal === "menuHome"){
@@ -386,7 +397,7 @@ function Home(){
 
     return (
         <div id={styles.container}>
-            <MenuLateralMetas /> 
+            {menuLateral} 
             <div id={styles.conteudoPrincipal}>
                 <div>
                     <h4 id={styles.textoTitulo}>Seja bem vindo,<strong id={styles.subtextoP}> ADMINISTRADOR MASTER!</strong></h4>
